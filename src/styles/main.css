@@ -1,0 +1,73 @@
+body {
+    background-color: #e9f1ef;
+    /* background-image: url('../assets/background1.png'); */
+
+}
+
+/* body::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+} */
+
+.header-div-container {
+    background-color: #caf3ea;
+    background-image: url('../assets/background.png');
+    margin-top: 20px;
+    border-radius: 40px;
+}
+
+.div-h1{
+    /* background-color: #eefffb; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-welcome {
+    font-family: "Meriweather" serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #dcdcdc;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);}
+
+.div-cart {
+    /* background-color: #eefffb; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-div-cart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: url('../assets/background1.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Para que la sombra no se salga */
+  }
+
+.second-div-cart::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* Blanco con 40% transparencia */
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .second-div-cart > * {
+    position: relative;
+    z-index: 2;
+  }
+
+footer {
+    background-image: url('../assets/background.png');
+}
