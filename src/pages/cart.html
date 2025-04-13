@@ -45,37 +45,64 @@
           <div class="row">
             <div class="col">
               <div class="table-responsive">
-                <table>
-                  <thead>
+                <table class="table">
+                  <thead class="table-thead">
                     <tr>
                       <th>Imagen</th>
-                      <th>Producto</th>
-                      <th>Precio</th>
-                      <th>Cantidad</th>
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Amount</th>
                       <th>Total</th>
-                      <th>Eliminar</th>
+                      <th>Remove</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <td>
-                      <img
-                        class="img-product"
-                        src="../assets/product1.png"
-                        alt="producto"
-                      />
-                    </td>
-                    <td>Zapato</td>
-                    <td>69.99</td>
-                    <td>
-                      <input type="number" value="1" min="1" />
-                    </td>
-                    <td>69.99</td>
-                    <td>69.99</td>
-                    <td>
-                      <button class="btn-danger">X</button>
-                    </td>
+
+                  <tbody class="table-tbody">
+                    <tr>
+                      <td>
+                        <img
+                          class="table-img-product"
+                          src="../assets/product1.png"
+                          alt="product"
+                          width="70px"
+                        />
+                      </td>
+                      <td>Product Name</td>
+                      <td>$69.99</td>
+                      <td>
+                        <input
+                          class="tbody-input"
+                          type="number"
+                          value="1"
+                          min="1"
+                        />
+                      </td>
+                      <td>$69.99</td>
+                      <td>
+                        <button class="table-tbody-btn">
+                          <animated-icons
+                            src="https://animatedicons.co/get-icon?name=delete&style=minimalistic&token=c1352b7b-2e14-4124-b8fd-a064d7e44225"
+                            trigger="hover"
+                            attributes='{"variationThumbColour":"#536DFE","variationName":"Two Tone","variationNumber":2,"numberOfGroups":2,"backgroundIsGroup":false,"strokeWidth":1,"defaultColours":{"group-1":"#000000","group-2":"#9AF1DEFF","background":"#FFFFFF"}}'
+                            height="60px"
+                            width="60px"
+                          ></animated-icons>
+                        </button>
+                      </td>
+                    </tr>
                   </tbody>
+
+                  <tfoot>
+                    <tr>
+                      <td colspan="4">Total to pay</td>
+                      <td colspan="2" class="text-center">$69.99</td>
+                    </tr>
+                  </tfoot>
                 </table>
+
+                <div class="text-center">
+                  <button class="btn-pay">Pay</button>
+                </div>
               </div>
             </div>
           </div>

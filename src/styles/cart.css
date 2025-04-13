@@ -54,3 +54,71 @@ footer {
 .img-product {
     width: 60px;
 }
+
+.table {
+    display: table; 
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.table th, .table td { 
+    border: 1px solid #ddd;
+    /* text-align: center; */
+    vertical-align: middle;
+}
+  
+.table-thead {
+    background-color: #bee5dd;
+    font-weight: bold;
+}
+
+.table-tbody {
+    background-color: #bee5dd23;
+}
+
+.tbody-input {
+    max-width: 70px;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid #bee5dd;
+}
+
+.table-img-product {
+    width: 90px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #bee5dd;
+    transition: 0.3s;
+}
+
+.table-tbody-btn {
+    background: none;
+    border: none;
+}
+
+.btn-pay {
+
+    font-family: "Meriweather", serif;
+    background-image: url(../assets/background.png);
+    background-color: #bee5dd45;
+    background-blend-mode: overlay;
+    color: #ffffff;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+    width: 20%;
+    height: 60px;
+    transition: 0.4s
+}
+
+.btn-pay:hover {
+    background-image: url(../assets/background.png);
+    background-blend-mode: normal;
+    font-size: 25px;
+    box-shadow: 0 0 10px #bee5dd;
+}
