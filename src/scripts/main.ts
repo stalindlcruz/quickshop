@@ -2,6 +2,7 @@ import { ProductService } from "../services/product-service.js";
 import { Product } from "../models/product.js";
 import { UserService } from "../services/user-service.js";
 import { User } from "../models/user.js";
+import { CartService } from "../services/cart-service.js";
 
 const invoiceModal = document.querySelector(
   "#invoiceModal"
@@ -25,10 +26,15 @@ if (openBtn && closeBtn && invoiceModal) {
 
 const productService = new ProductService();
 const userService = new UserService();
+const cartService = new CartService();
+
+(window as any).cart = cartService;
 
 async function initializeApp(): Promise<void> {
   await productService.fetchProducts();
-  const user = await userService.getRandomUser(); // ✅ AQUÍ era el error
+  await userService.fetchUsers();
+
+  const user = userService.getRandomUser();
   const products = productService.getProducts();
 
   if (user) {
@@ -64,8 +70,8 @@ function renderProducts(products: Product[]): void {
     button.setAttribute("data-id", product.id.toString());
 
     button.addEventListener("click", () => {
-      console.log(`Producto agregado:`, product);
-      // lógica futura para agregar al carrito
+      cartService.addToCart(product);
+      console.log(`Producto agregado al carrito:`, product);
     });
 
     clone.classList.remove("d-none");
