@@ -1,4 +1,4 @@
-import { Product } from "../models/product";
+import { Product } from "../models/product.js";
 
 export class ProductService {
   private products: Product[] = [];
@@ -7,6 +7,7 @@ export class ProductService {
     try {
       const response = await fetch("https://fakestoreapi.com/products");
       const data = await response.json();
+
       this.products = data.map(
         (item: any) => new Product(item.id, item.title, item.price, item.image)
       );
