@@ -1,4 +1,3 @@
-// src/scripts/cart.ts
 import { CartService } from "../services/cart-service.js";
 import { CartItem } from "../models/cart-item.js";
 import { UserService } from "../services/user-service.js";
@@ -24,7 +23,6 @@ const modalBody = document.querySelector(
 ) as HTMLTableSectionElement;
 const modalTotal = document.querySelector("#modalTotal") as HTMLElement;
 
-// ✅ Corregido: ahora usamos el ID de cada <span>
 const userNameEl = document.querySelector("#modalUser") as HTMLElement;
 const userEmailEl = document.querySelector("#modalEmail") as HTMLElement;
 const userDateEl = document.querySelector("#modalDate") as HTMLElement;
@@ -99,7 +97,6 @@ async function renderInvoice(): Promise<void> {
 
   modalTotal.textContent = `$${cartService.getTotal().toFixed(2)}`;
 
-  // ✅ Mostrar nombre, email y fecha
   await userService.fetchUsers();
   const user = userService.getRandomUser();
 
